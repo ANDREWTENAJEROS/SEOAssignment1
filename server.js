@@ -11,6 +11,12 @@ app.use(express.static(path.join(__dirname, 'public/')));
 app.get('/', function(req, res){
   res.sendFile(path.join(__dirname, 'views/index.html'));
 });
+app.get('/index2.html', function(req, res){
+  res.sendFile(path.join(__dirname, 'views/index2.html'));
+});
+app.get('/index3.html', function(req, res){
+  res.sendFile(path.join(__dirname, 'views/index3.html'));
+});
 
 //express server listen
 var server = app.listen(app.get('port'), function(){
